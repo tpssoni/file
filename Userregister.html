@@ -9,6 +9,9 @@
 
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        
+
         <!------ Include the above in your HEAD tag ---------->
     <title>Registration</title>
 
@@ -34,6 +37,9 @@
   }
   .nav-item-active{
     float:right;
+  }
+  .navbar{
+      height: 90px;
   }
   .navbar-header{
     width:100%;
@@ -101,6 +107,10 @@
     background: #8BC34A;
     color: #ffffff;
   }
+
+  .btnn{
+      padding: 0px 5px;
+  }
     
 .input::-webkit-inner-spin-button, 
 .input::-webkit-outer-spin-button { 
@@ -134,21 +144,34 @@
   </head>
 
   <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#" style="margin-right: 60rem">Policy Tracker</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="userlog.html">Login<span class="sr-only">(current)</span></a>
-                    </li>
-                    
-                  </ul>
-                </div>
-              </nav>
+
+
+        <nav class="navbar navbar-light bg-light">
+               <a href="policy1.html?id=${user.userId}"> <img src="https://firebasestorage.googleapis.com/v0/b/policy-65ae1.appspot.com/o/logo.png?alt=media&token=3f99482f-6af5-477e-9e56-2e55de640f3c" style="width:170px;height:75px;"></img></a>
+               <ul class="navbar-nav ml-auto">
+                   <li class="nav-item">
+                       <a class="nav-link" href="#"><span class="fa fa-bell"></span></a>
+                   </li>
+                   <li class="nav-item">
+                       <span class="navbar-text">
+                           Welcome, ${user.firstName}
+                       </span>
+                   </li>
+                   </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <form class="btnn">
+                                <a href="logout.html" class="btn btn-secondary  form-rounded" >Login</a>
+                            </form>
+                        </li>
+                    </ul>
+                        
+            </nav>
+
+
 <form action="userregistration.html"  method="POST">
+        <h1><p><u>NEW REGISTER</u></p></h1>
+
     <div class="row">
         <div class="col-sm-6">
         <label>
